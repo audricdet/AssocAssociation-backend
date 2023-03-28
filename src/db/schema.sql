@@ -39,6 +39,6 @@ ALTER TABLE
 ALTER TABLE
     "associations_categories" ADD CONSTRAINT "associations_categories_category_id_foreign" FOREIGN KEY("category_id") REFERENCES "categories"("id");
 ALTER TABLE
-    "profile" ADD CONSTRAINT "profile_user_id_foreign" FOREIGN KEY("user_id") REFERENCES "user"("id");
+    "profile" ADD CONSTRAINT "profile_user_id_foreign" FOREIGN KEY("user_id") REFERENCES "users"("id");
 ALTER TABLE
     "associations_categories" ADD CONSTRAINT "associations_categories_association_id_foreign" FOREIGN KEY("association_id") REFERENCES "associations"("id");
