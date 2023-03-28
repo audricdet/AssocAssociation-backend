@@ -1,5 +1,5 @@
 CREATE TABLE "profile"(
-    "id" BIGINT NOT NULL,
+    "id" SERIAL NOT NULL,
     "firstname" VARCHAR(255) NOT NULL,
     "lastname" VARCHAR(255) NOT NULL,
     "phone" VARCHAR(255) NOT NULL,
@@ -8,29 +8,30 @@ CREATE TABLE "profile"(
 ALTER TABLE
     "profile" ADD PRIMARY KEY("id");
 CREATE TABLE "associations"(
-    "id" BIGINT NOT NULL,
+    "id" SERIAL NOT NULL,
     "name" VARCHAR(255) NOT NULL,
-    "descritption" VARCHAR(255) NOT NULL,
+    "description" TEXT NOT NULL,
     "iban" VARCHAR(255) NOT NULL,
-    "country" VARCHAR(255) NOT NULL
+    "country" VARCHAR(255) NOT NULL, 
+    "logo" BYTEA NOT NULL
 );
 ALTER TABLE
     "associations" ADD PRIMARY KEY("id");
 CREATE TABLE "categories"(
-    "id" BIGINT NOT NULL,
+    "id" SERIAL NOT NULL,
     "name" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
     "categories" ADD PRIMARY KEY("id");
 CREATE TABLE "associations_categories"(
-    "id" BIGINT NOT NULL,
+    "id" SERIAL NOT NULL,
     "association_id" BIGINT NOT NULL,
     "category_id" BIGINT NOT NULL
 );
 ALTER TABLE
     "associations_categories" ADD PRIMARY KEY("id");
 CREATE TABLE "users"(
-    "id" BIGINT NOT NULL,
+    "id" SERIAL NOT NULL,
     "email" VARCHAR(255) NOT NULL,
     "password" VARCHAR(255) NOT NULL
 );
