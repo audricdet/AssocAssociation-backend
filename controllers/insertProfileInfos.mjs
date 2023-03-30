@@ -5,21 +5,18 @@ const insertProfileInfos = async (request, response) => {
     const {
         firstname,
         lastname,
-        email,
         phone,
         user_id
     } = request.body;
 
 await client.query(
-        `INSERT INTO profile (name,
-            lastname,
-            email,
+        `INSERT INTO profile (firstname,
+            lastname
             phone, 
             user_id)
-        VALUES ($1, $2, $3, $4, $5, $6)`,
+        VALUES ($1, $2, $3, $4)`,
         [   firstname,
             lastname,
-            email,
             phone, 
             user_id],
         (error, result) => {
