@@ -11,7 +11,7 @@ const insertProfileInfos = async (request, response) => {
 
 await client.query(
         `INSERT INTO profile (firstname,
-            lastname
+            lastname,
             phone, 
             user_id)
         VALUES ($1, $2, $3, $4)`,
