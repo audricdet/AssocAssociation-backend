@@ -30,7 +30,7 @@ const router = express.Router()
 
 //CORS
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://localhost:5173',
     credentials: true
 }))
 
@@ -61,5 +61,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log('Petfinder app listening on port 3000!');
+    console.log('AssocAssociation app listening on port 3000!');
 });
