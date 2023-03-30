@@ -16,9 +16,9 @@ import logoutRouter from './src/api/auth/logout.mjs'
 
 import auth from './src/middleware/verifyToken.mjs'
 
-
 //IMPORT CONTROLLERS
 
+import getProfileInfos from './controllers/getProfileInfos.mjs'
 
 
 const app = express() 
@@ -45,7 +45,9 @@ app.use('/', registerRouter)
 app.use('/logout', auth, logoutRouter)
 
 // REQUEST
+//GET 
 
+app.get('/profile/:id', auth, getProfileInfos)
 
 app.get('/', (req, res) => {
     res.sendStatus(200)
