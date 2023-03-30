@@ -20,6 +20,7 @@ import auth from './src/middleware/verifyToken.mjs'
 
 import getProfileInfos from './controllers/getProfileInfos.mjs'
 import insertProfileInfos from './controllers/insertProfileInfos.mjs'
+import getAllAssociations from './controllers/getAllAssociations.mjs'
 
 
 const app = express() 
@@ -49,6 +50,7 @@ app.use('/logout', auth, logoutRouter)
 //GET 
 
 app.get('/profile/:id', auth, getProfileInfos)
+app.get('/associations', auth, getAllAssociations)
 
 //POST 
 
