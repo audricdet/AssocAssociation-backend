@@ -29,7 +29,10 @@ const router = express.Router()
 
 
 //CORS
-app.use(cors())
+app.use(cors({
+    origin: 'http://localhost:5173',
+    credentials: true
+}))
 
 //USE 
 app.use(bodyParser.json());
