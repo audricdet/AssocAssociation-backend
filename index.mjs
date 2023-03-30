@@ -19,6 +19,7 @@ import auth from './src/middleware/verifyToken.mjs'
 //IMPORT CONTROLLERS
 
 import getProfileInfos from './controllers/getProfileInfos.mjs'
+import insertProfileInfos from './controllers/insertProfileInfos.mjs'
 
 
 const app = express() 
@@ -48,6 +49,10 @@ app.use('/logout', auth, logoutRouter)
 //GET 
 
 app.get('/profile/:id', auth, getProfileInfos)
+
+//POST 
+
+app.post('/insertProfileInfos', auth, insertProfileInfos)
 
 app.get('/', (req, res) => {
     res.sendStatus(200)
