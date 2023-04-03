@@ -52,7 +52,7 @@ app.use('/logout', auth, logoutRouter)
 
 app.get('/profile/:id', auth, getProfileInfos)
 app.get('/associations', auth, getAllAssociations)
-app.get('/associaitons/:id', auth, getAssociationInfos)
+app.get('/associations/:id', auth, getAssociationInfos)
 
 //POST 
 
