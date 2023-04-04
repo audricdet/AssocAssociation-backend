@@ -32,7 +32,7 @@ const register = async (request, response) => {
         [email, hashedPassword]
     );
 
-    response.status(201).send(`User added with ID: ${result.rows[0].id}`);
+    response.status(201).json(`User added with ID: ${result.rows[0].id}`);
 };
 
 
