@@ -56,7 +56,7 @@ app.get('/associations/:id', auth, getAssociationInfos)
 
 //POST 
 
-app.post('/insertProfileInfos', auth, insertProfileInfos)
+app.post('/insertProfileInfos', insertProfileInfos)
 
 app.get('/', (req, res) => {
     res.sendStatus(200)
