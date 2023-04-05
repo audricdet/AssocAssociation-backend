@@ -5,7 +5,7 @@ const getProfileInfos = (request, response) => {
 
     client.query(
         'SELECT * FROM profile WHERE id = $1',
-        [user_id],
+        [id],
         (error, result) => {
             if (error) {
                 response.status(500).json({ error });
