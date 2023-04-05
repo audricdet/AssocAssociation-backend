@@ -50,7 +50,7 @@ app.use('/logout', auth, logoutRouter)
 // REQUEST
 //GET 
 
-app.get('/profile/:id', auth, getProfileInfos)
+app.get('/profile/:userId', auth, getProfileInfos)
 app.get('/associations', auth, getAllAssociations)
 app.get('/associations/:id', auth, getAssociationInfos)
 
