@@ -2,9 +2,9 @@ import client from '../src/db/connect.mjs';
 
 
 const getProfileInfos = (request, response) => {
-    const id = request.params.id
+    const user_id = request.params.user_id
 
-    client.query("SELECT * FROM profile WHERE id = $1",
+    client.query("SELECT * FROM profile WHERE user_id = $1",
         [id],
         (error, result) => {
         if (error) {
