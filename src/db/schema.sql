@@ -13,7 +13,7 @@ CREATE TABLE "associations"(
     "description" TEXT NOT NULL,
     "iban" VARCHAR(255) NOT NULL,
     "country" VARCHAR(255) NOT NULL, 
-    "logo" BYTEA NOT NULL
+    "logo" VARCHAR(255) NOT NULL
 );
 ALTER TABLE
     "associations" ADD PRIMARY KEY("id");

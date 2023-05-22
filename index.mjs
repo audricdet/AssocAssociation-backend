@@ -22,6 +22,7 @@ import getProfileInfos from './controllers/getProfileInfos.mjs'
 import insertProfileInfos from './controllers/insertProfileInfos.mjs'
 import getAllAssociations from './controllers/getAllAssociations.mjs'
 import getAssociationInfos from './controllers/getAssociationInfos.mjs'
+import editProfileInfos from './controllers/editProfileInfos.mjs'
 
 
 const app = express() 
@@ -48,6 +49,9 @@ app.use('/', registerRouter)
 app.use('/logout', auth, logoutRouter)
 
 // REQUEST
+//PUT
+app.put('/profile/:user_id/edit', auth, editProfileInfos)
+
 //GET 
 
 app.get('/profile/:user_id', auth, getProfileInfos)
